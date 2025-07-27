@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Rawen Zgarni</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      const icon = document.getElementById('mode-icon');
+      html.classList.toggle('dark');
+      if (html.classList.contains('dark')) {
+        icon.textContent = '🌙';
+      } else {
+        icon.textContent = '🌞';
+      }
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const icon = document.getElementById('mode-icon');
+      if (document.documentElement.classList.contains('dark')) {
+        icon.textContent = '🌙';
+      } else {
+        icon.textContent = '🌞';
+      }
+    });
+  </script>
+</head>
+<body class="bg-[#F0F4F8] text-[#1A202C] dark:bg-[#1A202C] dark:text-[#E2E8F0] font-sans transition-colors duration-300">
+
+  <!-- Header with Toggle and Back -->
+  <header class="flex justify-between items-center p-4">
+    <a href="index.html" class="flex items-center gap-2 bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition-all duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+      🏠 Home
+    </a>
+    <button onclick="toggleDarkMode()" class="flex items-center gap-2 bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition-all duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+      <span id="mode-icon">🌞</span> Mode
+    </button>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center p-4 max-w-xl mx-auto">
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-6 text-[#2B6CB0] dark:text-[#90CDF4] transition-all duration-300">✉️ Contact Me</h1>
+    
+    <p class="mb-6 text-lg">
+      You can reach me at:
+    </p>
+
+    <div class="space-y-6 text-left w-full">
+
+      <p class="flex items-center gap-3 text-lg">
+        📧 
+        <a href="mailto:rawenzgarni1@gmail.com" class="text-[#7FA6EE] hover:text-[#5C85E6] transition-colors">
+          rawenzgarni1@gmail.com
+        </a>
+      </p>
+
+      <p class="flex items-center gap-3 text-lg">
+        📞 
+        <a href="tel:+29449504" class="text-[#7FA6EE] hover:text-[#5C85E6] transition-colors">
+          +216 29 449 504
+        </a>
+      </p>
+
+      <p class="flex items-center gap-3 text-lg">
+        🔗 
+        <a href="https://www.linkedin.com/in/rawen-zgarni-767117364" target="_blank" rel="noopener" class="text-[#7FA6EE] hover:text-[#5C85E6] transition-colors">
+          LinkedIn Profile
+        </a>
+      </p>
+
+     <p class="flex items-center gap-3 text-lg">
+  💻 
+  <a href="https://github.com/zgarnirawen" target="_blank" rel="noopener" class="text-[#7FA6EE] hover:text-[#5C85E6] transition-colors">
+    GitHub Profile
+  </a>
+</p>
+
+    </div>
+
+    <!-- Back to Home Button -->
+    <a href="index.html" class="mt-10 inline-flex items-center gap-2 bg-[#7FA6EE] text-white px-6 py-3 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition-all duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+      🏠 Back to Home
+    </a>
+  </section>
+
+</body>
+</html>

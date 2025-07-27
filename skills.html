@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills | Rawen Zgarni</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      const icon = document.getElementById('mode-icon');
+      html.classList.toggle('dark');
+      if (html.classList.contains('dark')) {
+        icon.textContent = '🌙';
+      } else {
+        icon.textContent = '🌞';
+      }
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const icon = document.getElementById('mode-icon');
+      if (document.documentElement.classList.contains('dark')) {
+        icon.textContent = '🌙';
+      } else {
+        icon.textContent = '🌞';
+      }
+    });
+  </script>
+</head>
+<body class="bg-[#F0F4F8] text-[#1A202C] dark:bg-[#1A202C] dark:text-[#E2E8F0] font-sans transition-colors duration-300">
+
+  <!-- Header with Toggle and Back -->
+  <header class="flex justify-between items-center p-4">
+    <a href="index.html" class="flex items-center gap-2 bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition-all duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+      🏠 Home
+    </a>
+    <button onclick="toggleDarkMode()" class="flex items-center gap-2 bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition-all duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+      <span id="mode-icon">🌞</span> Mode
+    </button>
+  </header>
+
+  <!-- Skills Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center p-4">
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-6 text-[#2B6CB0] dark:text-[#90CDF4] transition-all duration-300">🛠️ Skills</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full p-4">
+
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2 text-[#2B6CB0] dark:text-[#90CDF4]">💻 Programming Languages</h2>
+        <p>C, C++, Python, MATLAB, HTML, CSS, JavaScript</p>
+      </div>
+
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2 text-[#2B6CB0] dark:text-[#90CDF4]">🌐 Development</h2>
+        <p>Web Development, Qt Designer, OOP, Scrum</p>
+      </div>
+
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2 text-[#2B6CB0] dark:text-[#90CDF4]">🗄️ Databases</h2>
+        <p>SQL, Relational Algebra</p>
+      </div>
+
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2 text-[#2B6CB0] dark:text-[#90CDF4]">📡 Networks & Tools</h2>
+        <p>CCNA1, UML Modeling, Figma, Jira, VS Code, Visual Studio</p>
+      </div>
+
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2 text-[#2B6CB0] dark:text-[#90CDF4]">🗣️ Languages</h2>
+        <p>Arabic (Native), French (Good), English (Good), Spanish (Beginner)</p>
+      </div>
+
+    </div>
+
+    <!-- Back to Home Button -->
+    <a href="index.html" class="mt-8 inline-flex items-center gap-2 bg-[#7FA6EE] text-white px-6 py-3 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition-all duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+      🏠 Back to Home
+    </a>
+
+  </section>
+
+</body>
+</html>

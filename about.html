@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Rawen Zgarni</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      const icon = document.getElementById('mode-icon');
+      html.classList.toggle('dark');
+      if (html.classList.contains('dark')) {
+        icon.textContent = '🌙';
+      } else {
+        icon.textContent = '🌞';
+      }
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const icon = document.getElementById('mode-icon');
+      if (document.documentElement.classList.contains('dark')) {
+        icon.textContent = '🌙';
+      } else {
+        icon.textContent = '🌞';
+      }
+    });
+  </script>
+</head>
+<body class="bg-[#F0F4F8] text-[#1A202C] dark:bg-[#1A202C] dark:text-[#E2E8F0] font-sans transition-colors duration-300">
+
+  <!-- Header with Toggle and Back -->
+  <header class="flex justify-between items-center p-4">
+    <a href="index.html" class="flex items-center gap-2 bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition-all duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+      🏠 Home
+    </a>
+    <button onclick="toggleDarkMode()" class="flex items-center gap-2 bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition-all duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+      <span id="mode-icon">🌞</span> Mode
+    </button>
+  </header>
+
+  <!-- About Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center p-4">
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-6 text-[#2B6CB0] dark:text-[#90CDF4] transition-all duration-300">📄 About Me</h1>
+    <p class="text-lg sm:text-xl max-w-2xl mb-6">
+      I am <strong>Rawen Zgarni</strong>, a  Computer Science engineering student at ENICarthage, passionate about software development, networks, and system optimization. Curious and determined, I enjoy tackling technical challenges and contributing to innovative projects. Outside my studies, I love reading, baking, and DIY crafts, fueling my creativity and attention to detail. I aim to apply my skills in a dynamic environment while pursuing continuous professional growth.
+    </p>
+    <p class="text-md max-w-xl text-gray-600 dark:text-gray-300">
+      This portfolio showcases my skills, academic projects, and growth as a software engineering student ready to learn and contribute meaningfully to the tech world.
+    </p>
+
+    <!-- Back to Home Button -->
+    <a href="index.html" class="mt-8 inline-flex items-center gap-2 bg-[#7FA6EE] text-white px-6 py-3 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition-all duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+      🏠 Back to Home
+    </a>
+  </section>
+
+</body>
+</html>

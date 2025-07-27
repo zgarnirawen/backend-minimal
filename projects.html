@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Rawen Zgarni</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      const icon = document.getElementById('mode-icon');
+      html.classList.toggle('dark');
+      icon.textContent = html.classList.contains('dark') ? '🌙' : '🌞';
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const icon = document.getElementById('mode-icon');
+      icon.textContent = document.documentElement.classList.contains('dark') ? '🌙' : '🌞';
+    });
+  </script>
+</head>
+<body class="bg-[#F0F4F8] text-[#1A202C] dark:bg-[#1A202C] dark:text-[#E2E8F0] font-sans transition-colors duration-300">
+
+  <!-- Header with Toggle and Back -->
+  <header class="flex justify-between items-center p-4">
+    <a href="index.html" class="flex items-center gap-2 bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+      🏠 Home
+    </a>
+    <button onclick="toggleDarkMode()" class="flex items-center gap-2 bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+      <span id="mode-icon">🌞</span> Mode
+    </button>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center p-4 max-w-6xl mx-auto">
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-8 text-[#2B6CB0] dark:text-[#90CDF4]">🚀 My JavaScript Projects</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+
+      <!-- Counter Program -->
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2">🔢 Counter Program</h2>
+        <p class="mb-4">Simple counter app to increment, decrement, and reset values.</p>
+        <div class="flex flex-wrap gap-2">
+          <a href="#" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Live (Coming Soon)</a>
+          <a href="https://github.com/zgarnirawen/CompteurJs" target="_blank" class="bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] transition">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Number Guessing Game -->
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2">❓ Number Guessing Game</h2>
+        <p class="mb-4">Guess a random number with hints to learn logic building.</p>
+        <div class="flex flex-wrap gap-2">
+          <a href="#" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Live (Coming Soon)</a>
+          <a href="https://github.com/zgarnirawen/GuessTheNumberGame" target="_blank" class="bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] transition">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Temperature Converter -->
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2">🌡️ Temperature Converter</h2>
+        <p class="mb-4">Convert temperatures between Celsius, Fahrenheit, and Kelvin easily.</p>
+        <div class="flex flex-wrap gap-2">
+          <a href="#" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Live (Coming Soon)</a>
+          <a href="https://github.com/zgarnirawen/temperatureConversion" target="_blank" class="bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] transition">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Dice Roller -->
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2">🎲 Dice Roller</h2>
+        <p class="mb-4">Simulates dice rolls for random outcomes and gaming practice.</p>
+        <div class="flex flex-wrap gap-2">
+          <a href="#" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Live (Coming Soon)</a>
+          <a href="https://github.com/zgarnirawen/RollTheDice" target="_blank" class="bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] transition">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Password Generator -->
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2">🔐 Password Generator</h2>
+        <p class="mb-4">Generates secure random passwords with options for strength and length.</p>
+        <div class="flex flex-wrap gap-2">
+          <a href="#" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Live (Coming Soon)</a>
+          <a href="https://github.com/zgarnirawen/passwordGenerator" target="_blank" class="bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] transition">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Digital Clock -->
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2">⏰ Digital Clock</h2>
+        <p class="mb-4">Live digital clock displaying the current time in a clean interface.</p>
+        <div class="flex flex-wrap gap-2">
+          <a href="#" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Live (Coming Soon)</a>
+          <a href="https://github.com/zgarnirawen/digitalClock" target="_blank" class="bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] transition">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Stopwatch -->
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2">⏱️ Stopwatch</h2>
+        <p class="mb-4">Tracks elapsed time for productivity and study management.</p>
+        <div class="flex flex-wrap gap-2">
+          <a href="#" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Live (Coming Soon)</a>
+          <a href="https://github.com/zgarnirawen/stopWatch" target="_blank" class="bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] transition">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Calculator -->
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2">🧮 Calculator</h2>
+        <p class="mb-4">A simple calculator for performing arithmetic operations easily.</p>
+        <div class="flex flex-wrap gap-2">
+          <a href="#" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Live (Coming Soon)</a>
+          <a href="https://github.com/zgarnirawen/calculator" target="_blank" class="bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] transition">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Rock Paper Scissors -->
+      <div class="bg-white dark:bg-[#2D3748] rounded-lg shadow p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold mb-2">✊ Rock Paper Scissors</h2>
+        <p class="mb-4">Classic Rock-Paper-Scissors game to play against the computer.</p>
+        <div class="flex flex-wrap gap-2">
+          <a href="#" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Live (Coming Soon)</a>
+          <a href="https://github.com/zgarnirawen/RockPaperScissors" target="_blank" class="bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] transition">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Back to Home Button -->
+    <a href="index.html" class="mt-10 inline-flex items-center gap-2 bg-[#7FA6EE] text-white px-6 py-3 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+      🏠 Back to Home
+    </a>
+  </section>
+
+</body>
+</html>

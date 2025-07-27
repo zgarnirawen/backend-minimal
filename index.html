@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rawen Zgarni | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      const icon = document.getElementById('mode-icon');
+      html.classList.toggle('dark');
+      if (html.classList.contains('dark')) {
+        icon.textContent = '🌙';
+      } else {
+        icon.textContent = '🌞';
+      }
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const icon = document.getElementById('mode-icon');
+      if (document.documentElement.classList.contains('dark')) {
+        icon.textContent = '🌙';
+      } else {
+        icon.textContent = '🌞';
+      }
+    });
+  </script>
+</head>
+<body class="bg-[#F0F4F8] text-[#1A202C] dark:bg-[#1A202C] dark:text-[#E2E8F0] font-sans transition-colors duration-300 flex flex-col min-h-screen">
+
+  <!-- Header with Toggle -->
+  <header class="flex justify-between items-center p-4">
+    <h1 class="text-lg font-bold">Rawen Zgarni</h1>
+    <button onclick="toggleDarkMode()" class="flex items-center gap-2 bg-[#7FA6EE] text-white px-4 py-2 rounded-full hover:bg-[#5C85E6] transition-all duration-300 hover:scale-105 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+      <span id="mode-icon">🌞</span> Mode
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="flex-grow flex flex-col justify-center items-center text-center bg-gradient-to-b from-[#F0F4F8] to-[#D9E2EC] dark:from-[#1A202C] dark:to-[#2D3748] p-6 gap-8 transition-all duration-300">
+
+    <!-- Photo on top -->
+    <div class="w-48 h-48 rounded-full overflow-hidden shadow-lg ring-4 ring-[#7FA6EE] dark:ring-[#90CDF4]">
+      <img src="assets/me.jpg" alt="Rawen Zgarni" class="object-cover w-full h-full hover:scale-105 transition-transform duration-300" />
+    </div>
+
+    <!-- Text Content -->
+    <div class="max-w-xl">
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 text-[#2B6CB0] dark:text-[#90CDF4] transition-all duration-300">👋 Hi, I'm Rawen Zgarni</h1>
+      <p class="text-lg sm:text-xl mb-6 transition-all duration-300">
+        A Computer Science engineering student passionate about software development, networks, and system optimization.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="about.html" class="flex items-center gap-2 bg-[#7FA6EE] text-white px-6 py-3 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition-all duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+          📄 About Me
+        </a>
+        <a href="skills.html" class="flex items-center gap-2 bg-[#7FA6EE] text-white px-6 py-3 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition-all duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+          🛠️ Skills
+        </a>
+        <a href="projects.html" class="flex items-center gap-2 bg-[#7FA6EE] text-white px-6 py-3 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition-all duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+          💻 Projects
+        </a>
+        <a href="contact.html" class="flex items-center gap-2 bg-[#7FA6EE] text-white px-6 py-3 rounded-full hover:bg-[#5C85E6] hover:scale-105 transition-all duration-300 dark:bg-[#2D3748] dark:hover:bg-[#4A5568]">
+          ✉️ Contact
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#7FA6EE] dark:bg-[#2D3748] text-white text-center py-4 mt-auto">
+    &copy; 2025 Rawen Zgarni. All rights reserved.
+  </footer>
+
+</body>
+</html>
